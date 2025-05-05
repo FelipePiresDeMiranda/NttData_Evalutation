@@ -63,6 +63,316 @@ namespace Ambev.DeveloperEvaluation.ORM.Migrations
 
                     b.ToTable("Users", (string)null);
                 });
+            modelBuilder.Entity("Ambev.WebApi.Entity.Branch", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+
+                NpgsqlPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                b.Property<DateTime>("Created")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Description")
+                    .HasMaxLength(255)
+                    .HasColumnType("nvarchar(255)");
+
+                b.Property<string>("Email")
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .HasColumnType("nvarchar(30)");
+
+                b.Property<bool>("IsActive")
+                    .HasColumnType("bit");
+
+                b.Property<bool>("IsTrial")
+                    .HasColumnType("bit");
+
+                b.Property<DateTime>("Modified")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .HasColumnType("nvarchar(30)");
+
+                b.Property<byte[]>("RowVersion")
+                    .IsConcurrencyToken()
+                    .ValueGeneratedOnAddOrUpdate()
+                    .HasColumnType("rowversion");
+
+                b.Property<string>("TestText")
+                    .HasMaxLength(50)
+                    .HasColumnType("nvarchar(50)");
+
+                b.HasKey("Id");
+
+                b.ToTable("Branchs");
+            });
+
+            modelBuilder.Entity("Ambev.WebApi.Entity.Customer", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+
+                NpgsqlPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                b.Property<DateTime>("Created")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Description")
+                    .HasMaxLength(255)
+                    .HasColumnType("nvarchar(255)");
+
+                b.Property<string>("Email")
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .HasColumnType("nvarchar(30)");
+
+                b.Property<bool>("IsActive")
+                    .HasColumnType("bit");
+
+                b.Property<bool>("IsTrial")
+                    .HasColumnType("bit");
+
+                b.Property<DateTime>("Modified")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .HasColumnType("nvarchar(30)");
+
+                b.Property<byte[]>("RowVersion")
+                    .IsConcurrencyToken()
+                    .ValueGeneratedOnAddOrUpdate()
+                    .HasColumnType("rowversion");
+
+                b.Property<string>("TestText")
+                    .HasMaxLength(50)
+                    .HasColumnType("nvarchar(50)");
+
+                b.HasKey("Id");
+
+                b.ToTable("Customers");
+            });
+
+            modelBuilder.Entity("Ambev.WebApi.Entity.Item", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+
+                NpgsqlPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                b.Property<DateTime>("Created")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Description")
+                    .HasMaxLength(255)
+                    .HasColumnType("nvarchar(255)");
+
+                b.Property<bool>("IsActive")
+                    .HasColumnType("bit");
+
+                b.Property<bool>("IsTrial")
+                    .HasColumnType("bit");
+
+                b.Property<DateTime>("Modified")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Number")
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .HasColumnType("nvarchar(30)");
+
+                b.Property<int>("ProductId")
+                    .HasColumnType("int");
+
+                b.Property<byte[]>("RowVersion")
+                    .IsConcurrencyToken()
+                    .ValueGeneratedOnAddOrUpdate()
+                    .HasColumnType("rowversion");
+
+                b.Property<int?>("SaleId")
+                    .HasColumnType("int");
+
+                b.Property<DateTime>("SetActive")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("TestText")
+                    .HasMaxLength(50)
+                    .HasColumnType("nvarchar(50)");
+
+                b.HasKey("Id");
+
+                b.HasIndex("ProductId");
+
+                b.HasIndex("SaleId");
+
+                b.ToTable("Items");
+            });
+
+            modelBuilder.Entity("Ambev.WebApi.Entity.Product", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+
+                NpgsqlPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+
+                b.Property<DateTime>("Created")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Description")
+                    .HasMaxLength(255)
+                    .HasColumnType("nvarchar(255)");
+
+                b.Property<bool>("IsActive")
+                    .HasColumnType("bit");
+
+                b.Property<bool>("IsTrial")
+                    .HasColumnType("bit");
+
+                b.Property<DateTime>("Modified")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .HasColumnType("nvarchar(30)");
+
+                b.Property<float>("Price")
+                    .HasColumnType("real");
+
+                b.Property<byte[]>("RowVersion")
+                    .IsConcurrencyToken()
+                    .ValueGeneratedOnAddOrUpdate()
+                    .HasColumnType("rowversion");
+
+                b.Property<string>("SKU")
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .HasColumnType("nvarchar(30)");
+
+                b.Property<DateTime>("SetActive")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("TestText")
+                    .HasMaxLength(50)
+                    .HasColumnType("nvarchar(50)");
+
+                b.HasKey("Id");
+
+                b.ToTable("Products");
+            });
+
+            modelBuilder.Entity("Ambev.WebApi.Entity.Sale", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+
+                NpgsqlPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                b.Property<int?>("BranchId")
+                    .HasColumnType("int");
+
+                b.Property<DateTime>("Created")
+                    .HasColumnType("datetime2");
+
+                b.Property<int?>("CustomerId")
+                    .HasColumnType("int");
+
+                b.Property<string>("Description")
+                    .HasMaxLength(255)
+                    .HasColumnType("nvarchar(255)");
+
+                b.Property<float>("Discounts")
+                    .HasColumnType("real");
+
+                b.Property<bool>("IsActive")
+                    .HasColumnType("bit");
+
+                b.Property<bool>("IsTrial")
+                    .HasColumnType("bit");
+
+                b.Property<DateTime>("Modified")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Number")
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .HasColumnType("nvarchar(30)");
+
+                b.Property<byte[]>("RowVersion")
+                    .IsConcurrencyToken()
+                    .ValueGeneratedOnAddOrUpdate()
+                    .HasColumnType("rowversion");
+
+                b.Property<string>("TestText")
+                    .HasMaxLength(50)
+                    .HasColumnType("nvarchar(50)");
+
+                b.Property<float>("TotalAmounts")
+                    .HasColumnType("real");
+
+                b.HasKey("Id");
+
+                b.HasIndex("BranchId");
+
+                b.HasIndex("CustomerId");
+
+                b.ToTable("Sales");
+            });
+
+            modelBuilder.Entity("Ambev.WebApi.Entity.Item", b =>
+            {
+                b.HasOne("Ambev.WebApi.Entity.Product", "Product")
+                    .WithMany("Items")
+                    .HasForeignKey("ProductId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.HasOne("Ambev.WebApi.Entity.Sale", null)
+                    .WithMany("Items")
+                    .HasForeignKey("SaleId");
+
+                b.Navigation("Product");
+            });
+
+            modelBuilder.Entity("Ambev.WebApi.Entity.Sale", b =>
+            {
+                b.HasOne("Ambev.WebApi.Entity.Branch", null)
+                    .WithMany("Sales")
+                    .HasForeignKey("BranchId");
+
+                b.HasOne("Ambev.WebApi.Entity.Customer", null)
+                    .WithMany("Sales")
+                    .HasForeignKey("CustomerId");
+            });
+            modelBuilder.Entity("Ambev.WebApi.Entity.Branch", b =>
+            {
+                b.Navigation("Sales");
+            });
+
+            modelBuilder.Entity("Ambev.WebApi.Entity.Customer", b =>
+            {
+                b.Navigation("Sales");
+            });
+
+            modelBuilder.Entity("Ambev.WebApi.Entity.Product", b =>
+            {
+                b.Navigation("Items");
+            });
+
+            modelBuilder.Entity("Ambev.WebApi.Entity.Sale", b =>
+            {
+                b.Navigation("Items");
+            });
 #pragma warning restore 612, 618
         }
     }

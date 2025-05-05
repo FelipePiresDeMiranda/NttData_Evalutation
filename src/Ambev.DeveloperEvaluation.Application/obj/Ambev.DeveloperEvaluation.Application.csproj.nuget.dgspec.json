@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Application\\Ambev.DeveloperEvaluation.Application.csproj": {}
+    "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Application\\Ambev.DeveloperEvaluation.Application.csproj": {}
   },
   "projects": {
-    "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Application\\Ambev.DeveloperEvaluation.Application.csproj": {
+    "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Application\\Ambev.DeveloperEvaluation.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Application\\Ambev.DeveloperEvaluation.Application.csproj",
+        "projectUniqueName": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Application\\Ambev.DeveloperEvaluation.Application.csproj",
         "projectName": "Ambev.DeveloperEvaluation.Application",
-        "projectPath": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Application\\Ambev.DeveloperEvaluation.Application.csproj",
-        "packagesPath": "C:\\Users\\marcio.gomes\\.nuget\\packages\\",
-        "outputPath": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Application\\obj\\",
+        "projectPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Application\\Ambev.DeveloperEvaluation.Application.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\marcio.gomes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj": {
-                "projectPath": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj"
+              "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj": {
+                "projectPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj"
+              },
+              "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.ORM\\Ambev.DeveloperEvaluation.ORM.csproj": {
+                "projectPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.ORM\\Ambev.DeveloperEvaluation.ORM.csproj"
               }
             }
           }
@@ -79,21 +86,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Common\\Ambev.DeveloperEvaluation.Common.csproj": {
+    "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Common\\Ambev.DeveloperEvaluation.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Common\\Ambev.DeveloperEvaluation.Common.csproj",
+        "projectUniqueName": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Common\\Ambev.DeveloperEvaluation.Common.csproj",
         "projectName": "Ambev.DeveloperEvaluation.Common",
-        "projectPath": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Common\\Ambev.DeveloperEvaluation.Common.csproj",
-        "packagesPath": "C:\\Users\\marcio.gomes\\.nuget\\packages\\",
-        "outputPath": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Common\\obj\\",
+        "projectPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Common\\Ambev.DeveloperEvaluation.Common.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\felip\\Source\\Repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Common\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\marcio.gomes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -197,21 +208,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj": {
+    "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj",
         "projectName": "Ambev.DeveloperEvaluation.Domain",
-        "projectPath": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj",
-        "packagesPath": "C:\\Users\\marcio.gomes\\.nuget\\packages\\",
-        "outputPath": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Domain\\obj\\",
+        "projectPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\marcio.gomes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -226,8 +241,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Common\\Ambev.DeveloperEvaluation.Common.csproj": {
-                "projectPath": "D:\\tmp\\abi-gth-omnia-developer-evaluation\\template\\backend\\src\\Ambev.DeveloperEvaluation.Common\\Ambev.DeveloperEvaluation.Common.csproj"
+              "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Common\\Ambev.DeveloperEvaluation.Common.csproj": {
+                "projectPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Common\\Ambev.DeveloperEvaluation.Common.csproj"
               }
             }
           }
@@ -247,6 +262,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.10.0, )"
@@ -268,7 +287,96 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.ORM\\Ambev.DeveloperEvaluation.ORM.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.ORM\\Ambev.DeveloperEvaluation.ORM.csproj",
+        "projectName": "Ambev.DeveloperEvaluation.ORM",
+        "projectPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.ORM\\Ambev.DeveloperEvaluation.ORM.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.ORM\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj": {
+                "projectPath": "C:\\Users\\felip\\source\\repos\\NttData_Evalutation\\src\\Ambev.DeveloperEvaluation.Domain\\Ambev.DeveloperEvaluation.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

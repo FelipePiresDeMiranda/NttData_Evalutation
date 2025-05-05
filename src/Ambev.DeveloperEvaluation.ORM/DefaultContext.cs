@@ -9,6 +9,7 @@ namespace Ambev.DeveloperEvaluation.ORM;
 public class DefaultContext : DbContext
 {
     public DbSet<User> Users { get; set; }
+    public static bool RespositoryUseThreadSafeDictionary = false;
 
     public DefaultContext(DbContextOptions<DefaultContext> options) : base(options)
     {
