@@ -1,5 +1,4 @@
-﻿using Ambev.DeveloperEvaluation.Domain.Enums;
-using Ambev.DeveloperEvaluation.Domain.Validation;
+﻿using Ambev.DeveloperEvaluation.Domain.Validation;
 using FluentValidation;
 
 namespace Ambev.DeveloperEvaluation.Application.Customers.CreateCustomer;
@@ -25,7 +24,7 @@ public class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerCo
         RuleFor(Customer => Customer.Email).SetValidator(new EmailValidator());
         RuleFor(Customer => Customer.Name).NotEmpty().Length(3, 50);
         RuleFor(Customer => Customer.Description).NotEmpty();
-        RuleFor(Customer => Customer.IsActive).NotEmpty();        
+        RuleFor(Customer => Customer.IsActive).NotEmpty();
         RuleFor(Customer => Customer.IsTrial).NotEmpty();
     }
 }

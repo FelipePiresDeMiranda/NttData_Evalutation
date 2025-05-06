@@ -1,7 +1,6 @@
-using MediatR;
-using FluentValidation;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
-using Ambev.DeveloperEvaluation;
+using FluentValidation;
+using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Branchs.DeleteBranch;
 
@@ -37,14 +36,14 @@ public class DeleteBranchHandler : IRequestHandler<DeleteBranchCommand, DeleteBr
         if (!validationResult.IsValid)
             throw new ValidationException(validationResult.Errors);
 
-        try 
+        try
         {
             await _BranchRepository.Delete(request.Id.GetHashCode());
         }
         catch (Exception)
         {
-            throw new KeyNotFoundException($"Branch with ID {request.Id} not found");            
-        }                            
+            throw new KeyNotFoundException($"Branch with ID {request.Id} not found");
+        }
 
         return new DeleteBranchResponse { Success = true };
     }

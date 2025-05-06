@@ -1,7 +1,6 @@
-using MediatR;
-using FluentValidation;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
-using Ambev.DeveloperEvaluation;
+using FluentValidation;
+using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Customers.DeleteCustomer;
 
@@ -37,14 +36,14 @@ public class DeleteCustomerHandler : IRequestHandler<DeleteCustomerCommand, Dele
         if (!validationResult.IsValid)
             throw new ValidationException(validationResult.Errors);
 
-        try 
+        try
         {
             await _CustomerRepository.Delete(request.Id.GetHashCode());
         }
         catch (Exception)
         {
-            throw new KeyNotFoundException($"Customer with ID {request.Id} not found");            
-        }                            
+            throw new KeyNotFoundException($"Customer with ID {request.Id} not found");
+        }
 
         return new DeleteCustomerResponse { Success = true };
     }

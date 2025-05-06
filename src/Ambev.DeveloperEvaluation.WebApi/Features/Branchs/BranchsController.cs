@@ -1,13 +1,13 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using AutoMapper;
+﻿using Ambev.DeveloperEvaluation.Application.Branchs.CreateBranch;
+using Ambev.DeveloperEvaluation.Application.Branchs.DeleteBranch;
+using Ambev.DeveloperEvaluation.Application.Branchs.GetBranch;
 using Ambev.DeveloperEvaluation.WebApi.Common;
 using Ambev.DeveloperEvaluation.WebApi.Features.Branchs.CreateBranch;
-using Ambev.DeveloperEvaluation.WebApi.Features.Branchs.GetBranch;
 using Ambev.DeveloperEvaluation.WebApi.Features.Branchs.DeleteBranch;
-using Ambev.DeveloperEvaluation.Application.Branchs.CreateBranch;
-using Ambev.DeveloperEvaluation.Application.Branchs.GetBranch;
-using Ambev.DeveloperEvaluation.Application.Branchs.DeleteBranch;
+using Ambev.DeveloperEvaluation.WebApi.Features.Branchs.GetBranch;
+using AutoMapper;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Branchs;
 

@@ -42,7 +42,7 @@ public class CustomerRepository : IRepositoryAsync<Domain.Entities.Customer>
     /// <returns>The Customer if found, null otherwise</returns>
     public async Task<Customer?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     {
-        return await _context.Customers.FirstOrDefaultAsync(o=> o.Id == id, cancellationToken);
+        return await _context.Customers.FirstOrDefaultAsync(o => o.Id == id, cancellationToken);
     }
 
     /// <summary>

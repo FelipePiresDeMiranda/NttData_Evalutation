@@ -1,7 +1,6 @@
-using MediatR;
-using FluentValidation;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
-using Ambev.DeveloperEvaluation;
+using FluentValidation;
+using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Products.DeleteProduct;
 
@@ -37,14 +36,14 @@ public class DeleteProductHandler : IRequestHandler<DeleteProductCommand, Delete
         if (!validationResult.IsValid)
             throw new ValidationException(validationResult.Errors);
 
-        try 
+        try
         {
             await _ProductRepository.Delete(request.Id.GetHashCode());
         }
         catch (Exception)
         {
-            throw new KeyNotFoundException($"Product with ID {request.Id} not found");            
-        }                            
+            throw new KeyNotFoundException($"Product with ID {request.Id} not found");
+        }
 
         return new DeleteProductResponse { Success = true };
     }

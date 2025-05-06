@@ -1,5 +1,4 @@
 using AutoMapper;
-using Ambev.DeveloperEvaluation.Domain.Entities;
 
 namespace Ambev.DeveloperEvaluation.Application.Items.GetItem;
 
@@ -13,6 +12,6 @@ public class GetItemProfile : Profile
     /// </summary>
     public GetItemProfile()
     {
-        CreateMap <Domain.Entities.Item, GetItemResult>();
+        CreateMap<Domain.Entities.Item, GetItemResult>();
     }
 }

@@ -1,4 +1,3 @@
-using Ambev.DeveloperEvaluation.Application.Customers.GetCustomer;
 using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Customers.GetCustomer;

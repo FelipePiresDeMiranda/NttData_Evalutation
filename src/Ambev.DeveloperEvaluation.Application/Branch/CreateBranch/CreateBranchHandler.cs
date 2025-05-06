@@ -1,9 +1,8 @@
-﻿using AutoMapper;
-using MediatR;
-using FluentValidation;
+﻿using Ambev.DeveloperEvaluation.Common.Security;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
-using Ambev.DeveloperEvaluation.Domain.Entities;
-using Ambev.DeveloperEvaluation.Common.Security;
+using AutoMapper;
+using FluentValidation;
+using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Branchs.CreateBranch;
 
@@ -13,7 +12,7 @@ namespace Ambev.DeveloperEvaluation.Application.Branchs.CreateBranch;
 public class CreateBranchHandler : IRequestHandler<CreateBranchCommand, CreateBranchResult>
 {
     private readonly IRepositoryAsync<Domain.Entities.Branch> _BranchRepository;
-    private readonly IMapper _mapper;    
+    private readonly IMapper _mapper;
 
     /// <summary>
     /// Initializes a new instance of CreateBranchHandler
@@ -24,7 +23,7 @@ public class CreateBranchHandler : IRequestHandler<CreateBranchCommand, CreateBr
     public CreateBranchHandler(IRepositoryAsync<Domain.Entities.Branch> BranchRepository, IMapper mapper, IPasswordHasher passwordHasher)
     {
         _BranchRepository = BranchRepository;
-        _mapper = mapper;        
+        _mapper = mapper;
     }
 
     /// <summary>
@@ -45,7 +44,7 @@ public class CreateBranchHandler : IRequestHandler<CreateBranchCommand, CreateBr
         if (existingBranch != null)
             throw new InvalidOperationException($"Branch with name {command.Name} already exists");
 
-        var Branch = _mapper.Map<Domain.Entities.Branch>(command);        
+        var Branch = _mapper.Map<Domain.Entities.Branch>(command);
 
         await _BranchRepository.Insert(Branch);
         var result = _mapper.Map<CreateBranchResult>(Branch);

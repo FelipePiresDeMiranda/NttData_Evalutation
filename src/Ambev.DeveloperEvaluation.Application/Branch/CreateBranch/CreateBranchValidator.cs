@@ -1,6 +1,4 @@
-﻿using Ambev.DeveloperEvaluation.Domain.Enums;
-using Ambev.DeveloperEvaluation.Domain.Validation;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Ambev.DeveloperEvaluation.Application.Branchs.CreateBranch;
 
@@ -20,10 +18,10 @@ public class CreateBranchCommandValidator : AbstractValidator<CreateBranchComman
     /// - IsTrial:  Not empty    
     /// </remarks>
     public CreateBranchCommandValidator()
-    {        
+    {
         RuleFor(Branch => Branch.Name).NotEmpty().Length(3, 50);
         RuleFor(Branch => Branch.Description).NotEmpty();
-        RuleFor(Branch => Branch.IsActive).NotEmpty();        
+        RuleFor(Branch => Branch.IsActive).NotEmpty();
         RuleFor(Branch => Branch.IsTrial).NotEmpty();
     }
 }

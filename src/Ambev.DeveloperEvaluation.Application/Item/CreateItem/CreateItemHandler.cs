@@ -1,9 +1,8 @@
-﻿using AutoMapper;
-using MediatR;
-using FluentValidation;
+﻿using Ambev.DeveloperEvaluation.Common.Security;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
-using Ambev.DeveloperEvaluation.Domain.Entities;
-using Ambev.DeveloperEvaluation.Common.Security;
+using AutoMapper;
+using FluentValidation;
+using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Items.CreateItem;
 
@@ -13,7 +12,7 @@ namespace Ambev.DeveloperEvaluation.Application.Items.CreateItem;
 public class CreateItemHandler : IRequestHandler<CreateItemCommand, CreateItemResult>
 {
     private readonly IRepositoryAsync<Domain.Entities.Item> _ItemRepository;
-    private readonly IMapper _mapper;    
+    private readonly IMapper _mapper;
 
     /// <summary>
     /// Initializes a new instance of CreateItemHandler
@@ -24,7 +23,7 @@ public class CreateItemHandler : IRequestHandler<CreateItemCommand, CreateItemRe
     public CreateItemHandler(IRepositoryAsync<Domain.Entities.Item> ItemRepository, IMapper mapper, IPasswordHasher passwordHasher)
     {
         _ItemRepository = ItemRepository;
-        _mapper = mapper;        
+        _mapper = mapper;
     }
 
     /// <summary>
@@ -45,7 +44,7 @@ public class CreateItemHandler : IRequestHandler<CreateItemCommand, CreateItemRe
         if (existingItem != null)
             throw new InvalidOperationException($"Item with Number {command.Number} already exists");
 
-        var Item = _mapper.Map<Domain.Entities.Item>(command);        
+        var Item = _mapper.Map<Domain.Entities.Item>(command);
 
         await _ItemRepository.Insert(Item);
         var result = _mapper.Map<CreateItemResult>(Item);

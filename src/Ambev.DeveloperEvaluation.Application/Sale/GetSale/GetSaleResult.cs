@@ -1,5 +1,3 @@
-using Ambev.DeveloperEvaluation.Domain.Enums;
-
 namespace Ambev.DeveloperEvaluation.Application.Sales.GetSale;
 
 /// <summary>
@@ -25,5 +23,5 @@ public class GetSaleResult
     /// <summary>
     /// The Sale's phone number
     /// </summary>
-    public string Phone { get; set; } = string.Empty;       
+    public string Phone { get; set; } = string.Empty;
 }

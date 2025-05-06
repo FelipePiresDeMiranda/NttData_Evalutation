@@ -42,7 +42,7 @@ public class ProductRepository : IRepositoryAsync<Domain.Entities.Product>
     /// <returns>The Product if found, null otherwise</returns>
     public async Task<Product?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     {
-        return await _context.Products.FirstOrDefaultAsync(o=> o.Id == id, cancellationToken);
+        return await _context.Products.FirstOrDefaultAsync(o => o.Id == id, cancellationToken);
     }
 
     /// <summary>

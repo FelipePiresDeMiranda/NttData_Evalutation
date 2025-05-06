@@ -1,6 +1,4 @@
-﻿using Ambev.DeveloperEvaluation.Domain.Enums;
-
-namespace Ambev.DeveloperEvaluation.WebApi.Features.Items.CreateItem;
+﻿namespace Ambev.DeveloperEvaluation.WebApi.Features.Items.CreateItem;
 
 /// <summary>
 /// Represents a request to create a new Item in the system.

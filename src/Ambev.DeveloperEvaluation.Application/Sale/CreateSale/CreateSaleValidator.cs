@@ -1,6 +1,4 @@
-﻿using Ambev.DeveloperEvaluation.Domain.Enums;
-using Ambev.DeveloperEvaluation.Domain.Validation;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Ambev.DeveloperEvaluation.Application.Sales.CreateSale;
 
@@ -20,10 +18,10 @@ public class CreateSaleCommandValidator : AbstractValidator<CreateSaleCommand>
     /// - IsTrial:  Not empty    
     /// </remarks>
     public CreateSaleCommandValidator()
-    {        
+    {
         RuleFor(Sale => Sale.Number).NotEmpty().Length(3, 50);
         RuleFor(Sale => Sale.Description).NotEmpty();
-        RuleFor(Sale => Sale.IsActive).NotEmpty();        
+        RuleFor(Sale => Sale.IsActive).NotEmpty();
         RuleFor(Sale => Sale.IsTrial).NotEmpty();
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Ambev.DeveloperEvaluation.Common.Validation;
-using Ambev.DeveloperEvaluation.Domain.Enums;
 using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Products.CreateProduct;
@@ -22,7 +21,7 @@ public class CreateProductCommand : IRequest<CreateProductResult>
     /// <summary>
     /// Gets or sets the number of the Product to be created.
     /// </summary>
-    public string Sku { get; set; } = string.Empty;    
+    public string Sku { get; set; } = string.Empty;
 
     /// <summary>
     /// Gets or sets the description of the Product to be created.

@@ -1,6 +1,4 @@
-﻿using Ambev.DeveloperEvaluation.Domain.Enums;
-
-namespace Ambev.DeveloperEvaluation.WebApi.Features.Customers.CreateCustomer;
+﻿namespace Ambev.DeveloperEvaluation.WebApi.Features.Customers.CreateCustomer;
 
 /// <summary>
 /// Represents a request to create a new Customer in the system.

@@ -1,5 +1,4 @@
 ﻿using Ambev.DeveloperEvaluation.Common.Validation;
-using Ambev.DeveloperEvaluation.Domain.Enums;
 using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Items.CreateItem;
@@ -22,7 +21,7 @@ public class CreateItemCommand : IRequest<CreateItemResult>
     /// <summary>
     /// Gets or sets the number of the Item to be created.
     /// </summary>
-    public string Number { get; set; } = string.Empty;    
+    public string Number { get; set; } = string.Empty;
 
     /// <summary>
     /// Gets or sets the description of the Item to be created.

@@ -1,5 +1,3 @@
-using Ambev.DeveloperEvaluation.Domain.Enums;
-
 namespace Ambev.DeveloperEvaluation.Application.Products.GetProduct;
 
 /// <summary>
@@ -25,5 +23,5 @@ public class GetProductResult
     /// <summary>
     /// The Product's phone number
     /// </summary>
-    public string Phone { get; set; } = string.Empty;       
+    public string Phone { get; set; } = string.Empty;
 }

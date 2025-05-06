@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Ambev.DeveloperEvaluation.Domain.Common;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
-using Ambev.DeveloperEvaluation.Domain.Common;
 
 namespace Ambev.DeveloperEvaluation.Domain.Entities
 {
@@ -13,16 +10,16 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities
     {
         [Required]
         [StringLength(30)]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
         [Required]
         [StringLength(30)]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
         [StringLength(255)]
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
         public bool IsTrial { get; set; }
-        public bool IsActive { get; set; }        
+        public bool IsActive { get; set; }
 
-        public virtual ICollection<Sale> Sales { get; set; }
+        public virtual ICollection<Sale> Sales { get; set; } = new List<Sale>();
     }
 
 

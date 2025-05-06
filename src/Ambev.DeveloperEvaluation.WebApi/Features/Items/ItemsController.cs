@@ -1,13 +1,13 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using AutoMapper;
+﻿using Ambev.DeveloperEvaluation.Application.Items.CreateItem;
+using Ambev.DeveloperEvaluation.Application.Items.DeleteItem;
+using Ambev.DeveloperEvaluation.Application.Items.GetItem;
 using Ambev.DeveloperEvaluation.WebApi.Common;
 using Ambev.DeveloperEvaluation.WebApi.Features.Items.CreateItem;
-using Ambev.DeveloperEvaluation.WebApi.Features.Items.GetItem;
 using Ambev.DeveloperEvaluation.WebApi.Features.Items.DeleteItem;
-using Ambev.DeveloperEvaluation.Application.Items.CreateItem;
-using Ambev.DeveloperEvaluation.Application.Items.GetItem;
-using Ambev.DeveloperEvaluation.Application.Items.DeleteItem;
+using Ambev.DeveloperEvaluation.WebApi.Features.Items.GetItem;
+using AutoMapper;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Items;
 

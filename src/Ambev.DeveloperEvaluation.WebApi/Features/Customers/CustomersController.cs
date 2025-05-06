@@ -1,13 +1,13 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using AutoMapper;
+﻿using Ambev.DeveloperEvaluation.Application.Customers.CreateCustomer;
+using Ambev.DeveloperEvaluation.Application.Customers.DeleteCustomer;
+using Ambev.DeveloperEvaluation.Application.Customers.GetCustomer;
 using Ambev.DeveloperEvaluation.WebApi.Common;
 using Ambev.DeveloperEvaluation.WebApi.Features.Customers.CreateCustomer;
-using Ambev.DeveloperEvaluation.WebApi.Features.Customers.GetCustomer;
 using Ambev.DeveloperEvaluation.WebApi.Features.Customers.DeleteCustomer;
-using Ambev.DeveloperEvaluation.Application.Customers.CreateCustomer;
-using Ambev.DeveloperEvaluation.Application.Customers.GetCustomer;
-using Ambev.DeveloperEvaluation.Application.Customers.DeleteCustomer;
+using Ambev.DeveloperEvaluation.WebApi.Features.Customers.GetCustomer;
+using AutoMapper;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Customers;
 

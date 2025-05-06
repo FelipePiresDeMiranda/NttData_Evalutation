@@ -1,5 +1,4 @@
-﻿using Ambev.DeveloperEvaluation.Domain.Enums;
-using Ambev.DeveloperEvaluation.Domain.Validation;
+﻿using Ambev.DeveloperEvaluation.Domain.Validation;
 using FluentValidation;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Items.CreateItem;
@@ -27,6 +26,6 @@ public class CreateItemRequestValidator : AbstractValidator<CreateItemRequest>
         RuleFor(Item => Item.Itemname).NotEmpty().Length(3, 50);
         RuleFor(Item => Item.Password).SetValidator(new PasswordValidator());
         RuleFor(Item => Item.Phone).Matches(@"^\+?[1-9]\d{1,14}$");
-        
+
     }
 }

@@ -1,9 +1,8 @@
-﻿using AutoMapper;
-using MediatR;
-using FluentValidation;
+﻿using Ambev.DeveloperEvaluation.Common.Security;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
-using Ambev.DeveloperEvaluation.Domain.Entities;
-using Ambev.DeveloperEvaluation.Common.Security;
+using AutoMapper;
+using FluentValidation;
+using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Products.CreateProduct;
 
@@ -13,7 +12,7 @@ namespace Ambev.DeveloperEvaluation.Application.Products.CreateProduct;
 public class CreateProductHandler : IRequestHandler<CreateProductCommand, CreateProductResult>
 {
     private readonly IRepositoryAsync<Domain.Entities.Product> _ProductRepository;
-    private readonly IMapper _mapper;    
+    private readonly IMapper _mapper;
 
     /// <summary>
     /// Initializes a new instance of CreateProductHandler
@@ -24,7 +23,7 @@ public class CreateProductHandler : IRequestHandler<CreateProductCommand, Create
     public CreateProductHandler(IRepositoryAsync<Domain.Entities.Product> ProductRepository, IMapper mapper, IPasswordHasher passwordHasher)
     {
         _ProductRepository = ProductRepository;
-        _mapper = mapper;        
+        _mapper = mapper;
     }
 
     /// <summary>
@@ -45,7 +44,7 @@ public class CreateProductHandler : IRequestHandler<CreateProductCommand, Create
         if (existingProduct != null)
             throw new InvalidOperationException($"Product with Number {command.Sku} already exists");
 
-        var Product = _mapper.Map<Domain.Entities.Product>(command);        
+        var Product = _mapper.Map<Domain.Entities.Product>(command);
 
         await _ProductRepository.Insert(Product);
         var result = _mapper.Map<CreateProductResult>(Product);

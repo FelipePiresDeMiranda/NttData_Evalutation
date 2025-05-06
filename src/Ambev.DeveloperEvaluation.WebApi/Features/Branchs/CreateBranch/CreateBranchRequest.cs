@@ -1,6 +1,4 @@
-﻿using Ambev.DeveloperEvaluation.Domain.Enums;
-
-namespace Ambev.DeveloperEvaluation.WebApi.Features.Branchs.CreateBranch;
+﻿namespace Ambev.DeveloperEvaluation.WebApi.Features.Branchs.CreateBranch;
 
 /// <summary>
 /// Represents a request to create a new Branch in the system.

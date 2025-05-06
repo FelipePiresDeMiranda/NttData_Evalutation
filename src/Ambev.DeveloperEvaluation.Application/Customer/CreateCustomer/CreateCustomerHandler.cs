@@ -1,9 +1,8 @@
-﻿using AutoMapper;
-using MediatR;
-using FluentValidation;
+﻿using Ambev.DeveloperEvaluation.Common.Security;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
-using Ambev.DeveloperEvaluation.Domain.Entities;
-using Ambev.DeveloperEvaluation.Common.Security;
+using AutoMapper;
+using FluentValidation;
+using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Customers.CreateCustomer;
 
@@ -13,7 +12,7 @@ namespace Ambev.DeveloperEvaluation.Application.Customers.CreateCustomer;
 public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, CreateCustomerResult>
 {
     private readonly IRepositoryAsync<Domain.Entities.Customer> _CustomerRepository;
-    private readonly IMapper _mapper;    
+    private readonly IMapper _mapper;
 
     /// <summary>
     /// Initializes a new instance of CreateCustomerHandler
@@ -24,7 +23,7 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, Crea
     public CreateCustomerHandler(IRepositoryAsync<Domain.Entities.Customer> CustomerRepository, IMapper mapper, IPasswordHasher passwordHasher)
     {
         _CustomerRepository = CustomerRepository;
-        _mapper = mapper;        
+        _mapper = mapper;
     }
 
     /// <summary>
@@ -45,7 +44,7 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, Crea
         if (existingCustomer != null)
             throw new InvalidOperationException($"Customer with email {command.Email} already exists");
 
-        var Customer = _mapper.Map<Domain.Entities.Customer>(command);        
+        var Customer = _mapper.Map<Domain.Entities.Customer>(command);
 
         await _CustomerRepository.Insert(Customer);
         var result = _mapper.Map<CreateCustomerResult>(Customer);

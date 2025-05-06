@@ -42,7 +42,7 @@ public class BranchRepository : IRepositoryAsync<Domain.Entities.Branch>
     /// <returns>The Branch if found, null otherwise</returns>
     public async Task<Branch?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     {
-        return await _context.Branchs.FirstOrDefaultAsync(o=> o.Id == id, cancellationToken);
+        return await _context.Branchs.FirstOrDefaultAsync(o => o.Id == id, cancellationToken);
     }
 
     /// <summary>

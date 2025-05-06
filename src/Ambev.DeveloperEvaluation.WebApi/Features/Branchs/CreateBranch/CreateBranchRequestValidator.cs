@@ -1,5 +1,4 @@
-﻿using Ambev.DeveloperEvaluation.Domain.Enums;
-using Ambev.DeveloperEvaluation.Domain.Validation;
+﻿using Ambev.DeveloperEvaluation.Domain.Validation;
 using FluentValidation;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Branchs.CreateBranch;
@@ -27,6 +26,6 @@ public class CreateBranchRequestValidator : AbstractValidator<CreateBranchReques
         RuleFor(Branch => Branch.Branchname).NotEmpty().Length(3, 50);
         RuleFor(Branch => Branch.Password).SetValidator(new PasswordValidator());
         RuleFor(Branch => Branch.Phone).Matches(@"^\+?[1-9]\d{1,14}$");
-        
+
     }
 }

@@ -1,5 +1,3 @@
-using Ambev.DeveloperEvaluation.Domain.Enums;
-
 namespace Ambev.DeveloperEvaluation.Application.Branchs.GetBranch;
 
 /// <summary>
@@ -25,5 +23,5 @@ public class GetBranchResult
     /// <summary>
     /// The Branch's phone number
     /// </summary>
-    public string Phone { get; set; } = string.Empty;       
+    public string Phone { get; set; } = string.Empty;
 }

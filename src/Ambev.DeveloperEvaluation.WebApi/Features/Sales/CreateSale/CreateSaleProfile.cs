@@ -1,5 +1,5 @@
-using AutoMapper;
 using Ambev.DeveloperEvaluation.Application.Sales.CreateSale;
+using AutoMapper;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales.CreateSale;
 

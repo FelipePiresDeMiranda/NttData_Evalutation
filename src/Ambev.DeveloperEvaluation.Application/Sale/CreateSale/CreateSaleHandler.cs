@@ -1,9 +1,8 @@
-﻿using AutoMapper;
-using MediatR;
-using FluentValidation;
+﻿using Ambev.DeveloperEvaluation.Common.Security;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
-using Ambev.DeveloperEvaluation.Domain.Entities;
-using Ambev.DeveloperEvaluation.Common.Security;
+using AutoMapper;
+using FluentValidation;
+using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Sales.CreateSale;
 
@@ -13,7 +12,7 @@ namespace Ambev.DeveloperEvaluation.Application.Sales.CreateSale;
 public class CreateSaleHandler : IRequestHandler<CreateSaleCommand, CreateSaleResult>
 {
     private readonly IRepositoryAsync<Domain.Entities.Sale> _SaleRepository;
-    private readonly IMapper _mapper;    
+    private readonly IMapper _mapper;
 
     /// <summary>
     /// Initializes a new instance of CreateSaleHandler
@@ -24,7 +23,7 @@ public class CreateSaleHandler : IRequestHandler<CreateSaleCommand, CreateSaleRe
     public CreateSaleHandler(IRepositoryAsync<Domain.Entities.Sale> SaleRepository, IMapper mapper, IPasswordHasher passwordHasher)
     {
         _SaleRepository = SaleRepository;
-        _mapper = mapper;        
+        _mapper = mapper;
     }
 
     /// <summary>
@@ -45,7 +44,7 @@ public class CreateSaleHandler : IRequestHandler<CreateSaleCommand, CreateSaleRe
         if (existingSale != null)
             throw new InvalidOperationException($"Sale with Number {command.Number} already exists");
 
-        var Sale = _mapper.Map<Domain.Entities.Sale>(command);        
+        var Sale = _mapper.Map<Domain.Entities.Sale>(command);
 
         await _SaleRepository.Insert(Sale);
         var result = _mapper.Map<CreateSaleResult>(Sale);

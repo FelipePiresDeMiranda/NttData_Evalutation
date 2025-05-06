@@ -1,5 +1,4 @@
 using AutoMapper;
-using Ambev.DeveloperEvaluation.Domain.Entities;
 
 namespace Ambev.DeveloperEvaluation.Application.Branchs.GetBranch;
 
@@ -13,6 +12,6 @@ public class GetBranchProfile : Profile
     /// </summary>
     public GetBranchProfile()
     {
-        CreateMap <Domain.Entities.Branch, GetBranchResult>();
+        CreateMap<Domain.Entities.Branch, GetBranchResult>();
     }
 }

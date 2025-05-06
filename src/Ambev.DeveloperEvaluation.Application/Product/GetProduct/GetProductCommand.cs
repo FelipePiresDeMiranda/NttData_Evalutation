@@ -1,4 +1,3 @@
-using Ambev.DeveloperEvaluation.Application.Products.GetProduct;
 using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Products.GetProduct;

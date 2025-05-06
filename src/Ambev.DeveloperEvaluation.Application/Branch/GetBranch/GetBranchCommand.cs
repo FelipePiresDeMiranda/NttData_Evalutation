@@ -1,4 +1,3 @@
-using Ambev.DeveloperEvaluation.Application.Branchs.GetBranch;
 using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Branchs.GetBranch;

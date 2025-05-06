@@ -1,7 +1,6 @@
-using MediatR;
-using FluentValidation;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
-using Ambev.DeveloperEvaluation;
+using FluentValidation;
+using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Items.DeleteItem;
 
@@ -37,14 +36,14 @@ public class DeleteItemHandler : IRequestHandler<DeleteItemCommand, DeleteItemRe
         if (!validationResult.IsValid)
             throw new ValidationException(validationResult.Errors);
 
-        try 
+        try
         {
             await _ItemRepository.Delete(request.Id.GetHashCode());
         }
         catch (Exception)
         {
-            throw new KeyNotFoundException($"Item with ID {request.Id} not found");            
-        }                            
+            throw new KeyNotFoundException($"Item with ID {request.Id} not found");
+        }
 
         return new DeleteItemResponse { Success = true };
     }

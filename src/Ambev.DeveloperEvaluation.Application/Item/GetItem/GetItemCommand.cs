@@ -1,4 +1,3 @@
-using Ambev.DeveloperEvaluation.Application.Items.GetItem;
 using MediatR;
 
 namespace Ambev.DeveloperEvaluation.Application.Items.GetItem;
