@@ -22,7 +22,7 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities
         public bool IsTrial { get; set; }
         public bool IsActive { get; set; }        
 
-        //public virtual ICollection<Sale> Sales { get; set; }
+        public virtual ICollection<Sale> Sales { get; set; }
 
     }
 
