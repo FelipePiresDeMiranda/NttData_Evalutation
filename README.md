@@ -2,6 +2,14 @@
 
 `READ CAREFULLY`
 
+ps: Was created and made a configuration at microsoft azure to access of external users using Service Now but this service authentication was not connected to the solution (for now), fallow the credentials above.
+
+name: ServiceNow_NttData_Evaluation
+Application ID: 1042a772-1612-472a-893a-8fed9361a277
+Object ID: 04704293-228b-486b-813b-8489c320f45e
+instance URL:https://dev195061.service-now.com
+https://dev195061.service-now.com/nav_to.do?uri=saml2_update1_properties.do?sys_id=ad0c341c83952210eb05cc80ceaad344
+
 ## Instructions
 **The test below will have up to 7 calendar days to be delivered from the date of receipt of this manual.**
 
